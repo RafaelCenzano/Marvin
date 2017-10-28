@@ -2,7 +2,5 @@ import os
 import time
 import random
 
-for i range( 1, 4):
-  
-  a = random.choice(("Hello sir","Hi","Hello"))
-  print a
+a = random.choice(("Hello sir","Hello Rafael"))
+print a
