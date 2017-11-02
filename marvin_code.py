@@ -33,7 +33,7 @@ def recordAudio():
  
     return data
  
-def jarvis(data):
+def marvin(data):
     if "how are you" in data:
         speak("I am fine")
  
@@ -51,4 +51,4 @@ time.sleep(2)
 speak("Hi Rafael, what can I do for you?")
 while 1:
     data = recordAudio()
-    jarvis(data)
+    marvin(data)
