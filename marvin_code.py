@@ -1,11 +1,19 @@
-equires PyAudio and PySpeech.
+#requires PyAudio and PySpeech.
  
 import speech_recognition as sr
 from time import ctime
 import time
 import os
 from gtts import gTTS
- 
+
+def convert_timezone():
+  time.strftime('%X %x %Z')
+  os.environ['TZ'] = 'US/Pacific'
+  time.tzset()
+  time.strftime('%X %x %Z')
+
+convert_timezone()
+
 def speak(audioString):
     print(audioString)
     tts = gTTS(text=audioString, lang='en')
