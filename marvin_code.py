@@ -17,8 +17,8 @@ convert_timezone()
 def speak(audioString):
     print(audioString)
     tts = gTTS(text=audioString, lang='en')
-    tts.save("audio.mp3")
-    os.system("mpg321 audio.mp3")
+    tts.save("audio.wav")
+    os.system("mpg321 audio.wav")
  
 def recordAudio():
     # Record Audio
@@ -43,7 +43,7 @@ def recordAudio():
  
 def marvin(data):
     if "how are you" in data:
-        speak("I am fine")
+        speak("I am fine sir")
  
     if "what time is it" in data:
         speak(ctime())
