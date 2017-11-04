@@ -1,10 +1,11 @@
 #requires PyAudio and PySpeech.
  
 import speech_recognition as sr
-from time import ctime
+import time
 import time
 import os
 from gtts import gTTS
+import webbrowser
 
 def convert_timezone():
   time.strftime('%X %x %Z')
@@ -13,6 +14,7 @@ def convert_timezone():
   time.strftime('%X %x %Z')
 
 convert_timezone()
+new = 2
 
 def speak(audioString):
     print(audioString)
@@ -52,7 +54,8 @@ def marvin(data):
         data = data.split(" ")
         location = data[2]
         speak("Hold on Rafael, I will show you where " + location + " is.")
-        os.system("chromium-browser https://www.google.nl/maps/place/" + location + "/&amp;")
+        url = ("https://www.google.nl/maps/place/" + location + "/&amp;")
+        webbrowser.open(url,new=new)
  
 # initialization
 time.sleep(2)
