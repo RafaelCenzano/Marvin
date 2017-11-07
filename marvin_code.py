@@ -5,6 +5,7 @@ import time
 import time
 import os
 from gtts import gTTS
+from datetime import date, datetime
 import webbrowser
 
 def convert_timezone():
@@ -14,7 +15,7 @@ def convert_timezone():
   time.strftime('%X %x %Z')
 
 convert_timezone()
-new = 2
+my_date = date.today()
 
 def speak(audioString):
     print(audioString)
@@ -45,21 +46,31 @@ def recordAudio():
  
 def marvin(data):
     if "how are you" in data:
-        speak("I am fine")
+        speak("I am fine, sir")
  
     if "what time is it" in data:
-        speak(ctime())
- 
+        speak(datetime.now().strftime('%m/%d/%Y %I:%M'))
+        #speak(time.strftime("%I:%M:%S"))
+
     if "where is" in data:
         data = data.split(" ")
         location = data[2]
         speak("Hold on Rafael, I will show you where " + location + " is.")
+        new = 2
         url = ("https://www.google.nl/maps/place/" + location + "/&amp;")
         webbrowser.open(url,new=new)
- 
+
+    if "YouTube search" in data:
+        data = data.split(" ")
+        youtube_search = data[2]
+        speak("Hold on Rafael, I will look up " + youtube_search + " in youtube")
+        new = 2
+        url = ("https://www.youtube.com/results?search_query=" + youtube_search)
+        webbrowser.open(url,new=new)
+
 # initialization
 time.sleep(2)
-speak("Hi Rafael, what can I do for you?")
+speak("Hello Rafael, what can I do for you?")
 while 1:
     data = recordAudio()
     marvin(data)
