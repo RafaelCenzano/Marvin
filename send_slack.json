@@ -1,0 +1,7 @@
+{ "username": "name",
+  "icon_emoji": ":ghost:",
+  "channel":"#channel",
+  "text":"Hello!"
+}
+
+curl -H "Content-type:application/json" -X POST -d @slack.json [website here]
