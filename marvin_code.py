@@ -67,6 +67,12 @@ def marvin(data):
         url = ("https://www.youtube.com/results?search_query=" + youtube_search)
         webbrowser.open(url,new=new)
 
+    if "day of the week" in data:
+        speak(datetime.now().striftime('%A'))
+    
+    if "week number" in data:
+        speak(datetime.now().striftime('%W'))
+        
 # initialization
 time.sleep(2)
 speak("Hello Rafael, what can I do for you?")
