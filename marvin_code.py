@@ -49,8 +49,7 @@ def marvin(data):
         speak("I am fine, sir")
  
     if "what time is it" in data:
-        speak(datetime.now().strftime('%m/%d/%Y %I:%M'))
-        #speak(time.strftime("%I:%M:%S"))
+        speak(datetime.now().strftime('%B/%d/%Y %I:%M %p'))
 
     if "where is" in data:
         data = data.split(" ")
