@@ -11,3 +11,6 @@ Looking for any input and ideas.
 
 
 close_tab.py im having problems with chrome driver
+
+
+http://www.hackmac.org/articles/bash/bash-101-hello-world-and-a-little-further/
