@@ -49,7 +49,10 @@ def marvin(data):
         speak("I am fine, sir")
  
     if "what time is it" in data:
-        speak(datetime.now().strftime('%B/%d/%Y %I:%M %p'))
+        speak(datetime.now().strftime('%I:%M %p'))
+    
+    if "what is the date" in data:
+        speak(datetime.now().strftime('%B %-d  %Y'))
 
     if "where is" in data:
         data = data.split(" ")
@@ -72,6 +75,12 @@ def marvin(data):
     
     if "week number" in data:
         speak(datetime.now().striftime('%W'))
+
+    if "29 bus to school" in data:
+        speak("Hold on Rafael, I will open 29 bus times to school for you")
+        new = 2
+        url = ("https://www.nextmuni.com/#!/sf-muni/29/29___O_F00/5314")
+        webbrowser.open(url,new=new)
         
 # initialization
 time.sleep(2)

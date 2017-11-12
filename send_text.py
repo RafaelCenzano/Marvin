@@ -3,7 +3,7 @@ from twilio.rest import Client
 # Your Account SID from twilio.com/console
 account_sid = "Your id"
 # Your Auth Token from twilio.com/console
-auth_token  = "Your authentication"
+auth_token  = "your token"
 
 client = Client(account_sid, auth_token)
 
@@ -12,4 +12,4 @@ message = client.messages.create(
     from_="+sending phone from twilio",
     body="Hello\nMessage seny from program!")
 
-print(message.sid)
+#print(message.sid)
