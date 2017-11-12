@@ -19,7 +19,7 @@ my_date = date.today()
 
 def speak(audioString):
     print(audioString)
-    tts = gTTS(text=audioString, lang='en')
+    tts = gTTS(text=audioString, lang='en-uk')
     tts.save("../audio.mp3")
     os.system("mpg321 ../audio.mp3")
  
@@ -76,12 +76,21 @@ def marvin(data):
     if "week number" in data:
         speak(datetime.now().striftime('%W'))
 
-    if "29 bus to school" in data:
+    if "29 to school" in data:
         speak("Hold on Rafael, I will open 29 bus times to school for you")
         new = 2
         url = ("https://www.nextmuni.com/#!/sf-muni/29/29___O_F00/5314")
         webbrowser.open(url,new=new)
-        
+    
+    if "school schedule" in data:
+        speak("Hold on Rafael, I will open your school schedule")
+        new = 2
+        url = ("https://lhs-sfusd-ca.schoolloop.com/")
+        webbrowser.open(url,new=new)
+    
+    if "sleep Marvin" in data:
+        exit()
+    
 # initialization
 time.sleep(2)
 speak("Hello Rafael, what can I do for you?")
