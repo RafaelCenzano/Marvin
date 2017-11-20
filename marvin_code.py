@@ -1,7 +1,7 @@
+#!/Users/savagecoder/.virtualenvs/Marvin/bin/python
 #requires PyAudio and PySpeech.
  
 import speech_recognition as sr
-import time
 import time
 import os
 from gtts import gTTS
