@@ -89,8 +89,35 @@ def marvin(data):
         webbrowser.open(url,new=new)
     
     if "sleep Marvin" in data:
+        speak("Ok, Bye sir")
         exit()
     
+    if "who are you" in data:
+        speak("I am Marvin, Rafael's personal assistant")
+
+    if "can I see your code" in data:
+        speak("Hold on Rafael I will open my code for you")
+        new = 2
+        url = ("https://github.com/SavageCoder77/Marvin-Jarvis-")
+        webbrowser.open(url,new=new)
+    
+    if "show me your code" in data:
+        speak("Hold on Rafael I will open my code for you")
+        new = 2
+        url = ("https://github.com/SavageCoder77/Marvin-Jarvis-")
+        webbrowser.open(url,new=new)
+
+    if "What is my name" in data:
+        speak("Your name is Rafael, aka SavageCoder77")
+
+    if  "dab Marvin" in data:
+        speak("Let me virtually dab for you sir")
+        new = 2
+        url = ("https://media.tenor.com/images/fc64218e0e6a74dd75e1238c4698a35e/tenor.gif")
+        webbrowser.open(url,new=new)
+
+
+
 # initialization
 time.sleep(2)
 speak("Hello Rafael, what can I do for you?")
