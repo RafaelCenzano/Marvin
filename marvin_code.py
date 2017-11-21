@@ -2,6 +2,7 @@
 #requires PyAudio and PySpeech.
  
 import speech_recognition as sr
+import subprocess
 import time
 import os
 from gtts import gTTS
@@ -21,13 +22,13 @@ def speak(audioString):
     print(audioString)
     tts = gTTS(text=audioString, lang='en-uk')
     tts.save("../audio.mp3")
-    os.system("mpg321 ../audio.mp3")
+    proc = subprocess.Popen(["mpg321 ../audio.mp3"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    (out, err) = proc.communicate()
  
 def recordAudio():
     # Record Audio
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Say something!")
         audio = r.listen(source)
  
     # Speech recognition using Google Speech Recognition
@@ -116,11 +117,23 @@ def marvin(data):
         url = ("https://media.tenor.com/images/fc64218e0e6a74dd75e1238c4698a35e/tenor.gif")
         webbrowser.open(url,new=new)
 
+    if "Hello" in data:
+        speak("Hello sir")
+
+def entrance(name):
+    if "Raphael" in name:
+        user = ("Rafael")
+        speak("Hello Rafael, what can I do for you?")
+        while 1:
+            data = recordAudio()
+            marvin(data)
+
+    else:
+        speak("Try again I did not get that")
 
 
 # initialization
-time.sleep(2)
-speak("Hello Rafael, what can I do for you?")
-while 1:
-    data = recordAudio()
-    marvin(data)
+speak ("Please state your name")
+name = recordAudio()
+entrance(name)
+
