@@ -1,15 +1,24 @@
 # Marvin (Jarvis)
 a jarvis like program
 
-Help needed!
+### Help needed! ###
 
 
-pip install twilio
-make Twilio account
+- Looking for way to change gtts voice to male
 
-Looking for any input and ideas.
 
-Looking for way to change gtts voice to male
+- Looking for any input and ideas.
 
-close_tab.py im having problems with chrome driver
 
+### Installs Needed for Program ###
+
+
+-twilio (If you use text messageing module(needs bashscript to run file unless you move the module into marvin code))
+    make Twilio account
+
+
+
+### Errors That need work ###
+
+
+- close_tab.py im having problems with chrome driver
