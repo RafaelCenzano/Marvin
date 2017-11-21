@@ -13,8 +13,8 @@ a jarvis like program
 ### Installs Needed for Program ###
 
 
--twilio (If you use text messageing module(needs bashscript to run file unless you move the module into marvin code))
-    make Twilio account
+- twilio (If you use text messageing module(needs bashscript to run file unless you move the module into marvin code))
+    Also make Twilio account
 
 
 
