@@ -2,7 +2,7 @@
 ### a jarvis like program
 
 
-![Alt text](marvin.jpg?raw=true "Optional Title")
+![image](marvin.jpg?raw=true "Marvin Image")
 
 
 ### Help needed! ###
