@@ -10,7 +10,7 @@ subject = 'Your subject here'
 msg = MIMEMultipart()
 msg['From'] = email_user
 msg['To'] = email_receiver
-msg['Subject'] = subject
+msg['Subject'] = "subject"
 
 #message area
 email_message = 'message that can be changed.\nMulti-Line'
