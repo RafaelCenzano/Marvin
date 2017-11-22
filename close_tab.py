@@ -6,6 +6,6 @@ driver = webdriver.Chrome('/usr/local/lib/python3.5/site-packages/selenium/webdr
 driver.get("https://google.com")
 elem = driver.find_element_by_tag_name("body")
 time.sleep(5)
-elem.send_keys(Keys.COMMAND+"t")
+elem.send_keys(Keys.COMMAND+"T")
 time.sleep(5)
-elem.send_keys(Keys.COMMAND+"w")
+elem.send_keys(Keys.COMMAND+"W")
