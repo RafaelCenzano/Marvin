@@ -2,7 +2,7 @@
 ### a jarvis like program
 
 
-![image](marvin.jpg)
+![image](https://github.com/SavageCoder77/Marvin-Jarvis-/blob/master/marvin.jpeg?raw=true)
 
 
 ### Help needed! ###
