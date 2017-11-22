@@ -9,7 +9,9 @@ client = Client(account_sid, auth_token)
 
 message = client.messages.create(
     to="+Your phone number",
+    #phone number given by twilio
     from_="+sending phone from twilio",
-    body="Hello\nMessage seny from program!")
+    #Message with multi-line message
+    body="Hello\nMessage sent from program!")
 
 #print(message.sid)
