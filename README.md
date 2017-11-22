@@ -2,7 +2,7 @@
 ### a jarvis like program
 
 
-![image](marvin.jpg?raw=true "Marvin Image")
+![image](marvin.jpg)
 
 
 ### Help needed! ###
