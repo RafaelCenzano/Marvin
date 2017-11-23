@@ -42,6 +42,7 @@ def recordAudio():
     return data
  
 def marvin(data):
+    
     if "how are you" in data:
         speak("I am fine, sir")
  
@@ -167,7 +168,7 @@ def entrance(name):
             data = recordAudio()
             marvin(data)
 
-    if " grey grey" in name:
+    if " gray gray" in name:
         speak("I am programmed to respond to Rafael, but do not worry I can still help you")
         time.sleep(0.5)
         speak("Hello Grey grey, what can I do for you")
