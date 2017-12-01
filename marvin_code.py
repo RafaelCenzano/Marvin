@@ -139,6 +139,11 @@ def marvin(data):
         url = ("https://www.nextmuni.com/#!/sf-muni/29/29___O_F00/5314")
         webbrowser.open(url,new=new)
     
+    if "open amazon" in data:
+        speak("Hold on Rafael, I will open amazon for you")
+        url = ("https://www.amazon.com/")
+        webbrowser.open(url,new=new)
+    
     if "school schedule" in data:
         speak("Hold on Rafael, I will open your school schedule")
         url = ("https://lhs-sfusd-ca.schoolloop.com/")
