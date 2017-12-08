@@ -177,7 +177,7 @@ def marvin(data):
         url = ("https://weather.com/weather/hourbyhour/l/USCA0987:1:US")
         webbrowser.open(url,new=new)
 
-    if "what time is it in" in data:
+    if "time in" in data:
         data = data.split(" ")
         time_place = data[2]
         speak("Hold on Rafael, I will look up the time in " + time_place + " for you")
