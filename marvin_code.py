@@ -1,5 +1,3 @@
-#!/Users/savagecoder/.virtualenvs/Marvin/bin/python
- 
 import speech_recognition as sr
 import subprocess
 import time
@@ -30,6 +28,17 @@ def multiply(x, y):
 def divide(x, y):
           return x / y
 
+def tempeture_converter_F(x):
+   dotprint()
+        
+   speak("What unit do you want to convert to")
+   speak("1. Celsius")
+   speak("2. Fahrenheit")
+   dotprint()
+   speak("Enter choice")
+   
+   unit = raw_input("Enter choice (1 or 2): ")
+   
 def calculator():
         dotprint()
 
