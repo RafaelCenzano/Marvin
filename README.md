@@ -21,6 +21,8 @@
     Also make Twilio account
 
 
+- pyaudio and pyspeech
+
 
 ### Errors That need work ###
 
