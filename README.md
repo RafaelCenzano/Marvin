@@ -27,4 +27,4 @@
 ### Errors That need work ###
 
 
-- close_tab.py im having problems with chrome driver
+- close_tab.py im having problems with chrome driver (MAC
