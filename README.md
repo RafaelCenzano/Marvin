@@ -17,7 +17,7 @@
 ### Installs Needed for Program ###
 
 
-- twilio (If you use text messageing module(needs bashscript to run file unless you move the module into marvin code))
+- twilio (If you use text messageing module(needs bashscript to run file unless you move the module into marvin code)
     Also make Twilio account
 
 
@@ -27,4 +27,4 @@
 ### Errors That need work ###
 
 
-- close_tab.py im having problems with chrome driver (MAC
+- close_tab.py im having problems with chrome driver (MAC)
