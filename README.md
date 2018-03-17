@@ -2,9 +2,6 @@
 ### a jarvis like program
 
 
-![image](https://github.com/SavageCoder77/Marvin-Jarvis-/blob/master/marvin.jpeg?raw=true)
-
-
 ### Help needed! ###
 
 
@@ -22,6 +19,7 @@
 
 
 - pyaudio and pyspeech
+
 
 
 ### Errors That need work ###
