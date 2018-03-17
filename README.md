@@ -21,6 +21,8 @@
 - pyaudio and pyspeech
 
 
+- gTTs
+
 
 ### Errors That need work ###
 
