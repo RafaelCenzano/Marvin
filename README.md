@@ -18,8 +18,7 @@
 2. pyaudio and pyspeech
 [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/)
 [SpeechRecognition](https://pypi.python.org/pypi/SpeechRecognition/)
-3. gTTs
-[gTTS](https://pypi.python.org/pypi/gTTS/1.1.4)
+3. [gTTS](https://pypi.python.org/pypi/gTTS/1.1.4)
 
 
 ### Errors That need work ###
