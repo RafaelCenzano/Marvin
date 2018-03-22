@@ -37,60 +37,14 @@ def tempeture_converter_F(x):
    dotprint()
    speak("Enter choice")
    
-   unit = raw_input("Enter choice (1 or 2): ")
-   
-def calculator():
-        dotprint()
-
-        speak("Select operation")
-        print("1. Add")
-        print("2. Subtract")
-        print("3. Multiply")
-        print("4. Divide")
-        print("5. Square")
-        dotprint()
-
-        speak("Enter choice")
-        choice = raw_input("Enter choice (1. 2. 3. 4. 5.): ")
-
-        num1 = int(raw_input("Enter first number: "))
-        num2 = int(raw_input("Enter second number: "))
-
-        if choice == '1':
-           answer = add(num1, num2)
-           print'{} + {} = {}'.format(num1, num2, answer)
-           speak("The answer is below")
-           print(answer)
-
-        elif choice == '2':
-           answer = subtract(num1, num2)
-           print'{} - {} = {}'.format(num1, num2, answer)
-           speak("The answer is below")
-           print(answer)
-
-        elif choice == '3':
-           answer = multiply(num1, num2)
-           print'{} * {} = {}'.format(num1, num2, answer)
-           speak("The answer is below")
-           print(answer)
-
-        elif choice == '4':
-           answer = divide(num1, num2)
-           print'{} / {} = {}'.format(num1, num2, answer)
-           speak("The answer is below")
-           print(answer)
-
-        elif choice == '5':
-           answer = multiply(num1, num1)
-           print'{} squared = {}'.format(num1, answer)
-           speak("The answer is below")
-           print(answer)
-        else:
-           print("Invalid input")
+   unit = raw_input("(1 or 2): ")
 
 convert_timezone()
 my_date = date.today()
 new = 2
+
+def wait():
+  time.sleep(1)
 
 def speak(audioString):
     print(audioString)
@@ -120,6 +74,9 @@ def marvin(data):
     if "how are you" in data:
         speak("I am fine, sir")
     
+    if "who are you" in data:
+    	speak("I am Marvin a virtual assistant created in python to help Rafael")
+
     if "what is the date" in data:
         speak(datetime.now().strftime('%B %-d  %Y'))
 
@@ -202,127 +159,81 @@ def marvin(data):
         speak("Calculator mode activating")
         speak('How many calculations do you need to do, sir')
         g = int(raw_input('Number of calculations: '))
-        speak("Please keep in mind number 5 only requires the first number put any number in the second number")
+
         for t in range(0, g ):
-            calculator()
+            dotprint()
+
+            speak("Select operation")
+            print("1. Add")
+            print("2. Subtract")
+            print("3. Multiply")
+            print("4. Divide")
+            print("5. Square")
+            print("6. Leave Calculator Mode")
+            dotprint()
+
+            speak("Enter choice")
+            choice = raw_input("Enter choice (1. 2. 3. 4. 5.): ")
+
+            if choice == '1':
+               num1 = int(raw_input("Enter first number: "))
+               num2 = int(raw_input("Enter second number: "))
+
+               answer = add(num1, num2)
+               print'{} + {} = {}'.format(num1, num2, answer)
+               speak("The answer is below")
+               print(answer)
+
+            elif choice == '2':
+               num1 = int(raw_input("Enter first number: "))
+               num2 = int(raw_input("Enter second number: "))
+
+               answer = subtract(num1, num2)
+               print'{} - {} = {}'.format(num1, num2, answer)
+               speak("The answer is below")
+               print(answer)
+
+            elif choice == '3':
+               num1 = int(raw_input("Enter first number: "))
+               num2 = int(raw_input("Enter second number: "))
+  
+               answer = multiply(num1, num2)
+               print'{} * {} = {}'.format(num1, num2, answer)
+               speak("The answer is below")
+               print(answer)
+
+            elif choice == '4':
+               num1 = int(raw_input("Enter first number: "))
+               num2 = int(raw_input("Enter second number: "))
+
+               answer = divide(num1, num2)
+               print'{} / {} = {}'.format(num1, num2, answer)
+               speak("The answer is below")
+               print(answer)
+
+            elif choice == '5':
+               num1 = int(raw_input("Enter the number you want to square: "))
+
+               answer = multiply(num1, num1)
+               print'{} squared = {}'.format(num1, answer)
+               speak("The answer is below")
+               print(answer)
+
+            elif choice == '6':
+               speak("Exiting Calculator Mode")
+               break
+
+            else:
+               speak("Not an input, exiting Calculator Mode")
+               break
 
     if "thank you Marvin" in data:
-        speak("You are welcomme sir")
+        speak("You are welcome sir")
 
-def entrance(name):
-    if "Raphael" in name:
-        speak("Hello Rafael, what can I do for you?")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "Bella" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Bella, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "John" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello John, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "Adi" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Addie, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "Adelina" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Adelina, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "Raymonde" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Raymonde, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "gray gray" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Grey grey, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "cow fu" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Cow Fu, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "Alvin" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Alvin, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "Yan" in name:
-        speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-        time.sleep(0.5)
-        speak("Hello Yan, what can I do for you")
-        while 1:
-            print("Say Something")
-            data = recordAudio()
-            marvin(data)
-
-    if "yen" in name:
-        speak("Do you mean Yan?")
-        if raw_input('yes? or no? ').lower() == 'yes':
-
-            speak("I am programmed to respond to Rafael, but do not worry I can still help you")
-            time.sleep(0.5)
-            speak("Hello Yan, what can I do for you")
-            while 1:
-                print("Say Something")
-                data = recordAudio()
-                marvin(data)
-        else:
-            speak("Sorry I couldn't help")
-            quit()
-
-    else:
-        speak("Sorry I didn't get that")
-        if raw_input("Overide? ").lower() == '5555':
-            speak("Hello Rafael, what can I do for you")
-            while 1:
-                print("Say Something")
-                data = recordAudio()
-                marvin(data)
 
 # initialization
-speak ("Please state your name")
-name = recordAudio()
-entrance(name)
+wait()
+speak("Welcome to Marvin")
+while 1:
+  data = recordAudio()
+  marvin(data)
