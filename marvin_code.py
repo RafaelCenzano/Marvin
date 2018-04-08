@@ -234,6 +234,20 @@ def marvin(data):
 # initialization
 wait()
 speak("Welcome to Marvin")
-while 1:
-  data = recordAudio()
-  marvin(data)
+speak("Would u like to do voice commands")
+beg_input = raw_input(": ")
+if beg_input == 'yes':
+	while 1:
+	  data = recordAudio()
+	  marvin(data)
+
+elif
+	speak("Would you like to be on standby")
+	elif_input = raw_input(": ")	
+	
+		if elif_input == 'yes'
+		  speak('Type start to reopen voice commands or quit to exit')
+		  yey_or_ney = raw_input(": ")
+		elif
+		  speak("exiting")
+		  exit()
