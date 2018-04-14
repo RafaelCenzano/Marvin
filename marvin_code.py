@@ -239,15 +239,15 @@ speak("Would u like to do voice commands")
 beg_input = raw_input(": ")
 
 if beg_input == 'yes':
-	while 1:
-	  data = recordAudio()
-	  marvin(data)
+  while 1:
+    data = recordAudio()
+    marvin(data)
 
 else:
-	speak("Would you like to be on standby")
-	elif_input = raw_input(": ")	
+  speak("Would you like to be on standby")
+  elif_input = raw_input(": ")	
 	
-	if elif_input == 'yes':
+  if elif_input == 'yes':
     speak('Type start to reopen voice commands or quit to exit')
     yey_or_ney = raw_input(": ")
 
@@ -260,5 +260,5 @@ else:
       break
 
   else:
-	  speak("exiting")
-	  exit()
+    speak("exiting")
+    exit()
