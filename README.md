@@ -25,4 +25,4 @@
 
 
 1. close_tab.py im having problems with chrome driver (MAC)
-2. fix virtual env and pip installs the marvin folder was created by virtual env
+
