@@ -101,6 +101,20 @@ def marvin(data):
         url = ("https://www.google.com/search?q=" + image_search + "&rlz=1CASMAA_enUS796&source=lnms&tbm=isch&sa=X&ved=0ahUKEwixpf_Uu_TaAhVMyFQKHWrpD6sQ_AUICigB&biw=1280&bih=686&safe=active&ssui=on#imgdii=mj9_k0yRRbjthM:&imgrc=FaKznlq0LWXQ7M:")
         webbrowser.open(url,new=new)
 	
+    if "search" in data:
+	data = data.split(" ")
+        google_search = data[2]
+        speak("Hold on Rafael, I will look up " + google_search + " on Google")
+        url = ("https://www.google.com/search?ei=58DwWqutDseC0wLEpp2YCQ&q=" + google_search + "&oq=marvin&gs_l=psy-ab.3..0i131k1j0j0i131k1j0j0i46k1j46l2j0l5.10009.12091.0.12356.17.12.0.0.0.0.126.1032.9j2.12.0....0...1.1.64.psy-ab..11.4.394.0...62.WB-xzBYoFYo&safe=active&ssui=on")
+        webbrowser.open(url,new=new)
+
+    if "Google search" in data:
+	data = data.split(" ")
+        google_search = data[2]
+        speak("Hold on Rafael, I will look up " + google_search + " on Google")
+        url = ("https://www.google.com/search?ei=58DwWqutDseC0wLEpp2YCQ&q=" + google_search + "&oq=marvin&gs_l=psy-ab.3..0i131k1j0j0i131k1j0j0i46k1j46l2j0l5.10009.12091.0.12356.17.12.0.0.0.0.126.1032.9j2.12.0....0...1.1.64.psy-ab..11.4.394.0...62.WB-xzBYoFYo&safe=active&ssui=on")
+        webbrowser.open(url,new=new)
+	
     if "YouTube search" in data:
         data = data.split(" ")
         youtube_search = data[2]
