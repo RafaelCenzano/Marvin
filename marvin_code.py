@@ -86,7 +86,21 @@ def marvin(data):
         speak("Hold on Rafael, I will show you where " + location + " is.")
         url = ("https://www.google.nl/maps/place/" + location + "/&amp;")
         webbrowser.open(url,new=new)
+    
+    if "Google image search" in data:
+	data = data.split(" ")
+        youtube_search = data[2]
+        speak("Hold on Rafael, I will look up " + image_search + " in Google images")
+        url = ("https://www.google.com/search?q=" + image_search + "&rlz=1CASMAA_enUS796&source=lnms&tbm=isch&sa=X&ved=0ahUKEwixpf_Uu_TaAhVMyFQKHWrpD6sQ_AUICigB&biw=1280&bih=686&safe=active&ssui=on#imgdii=mj9_k0yRRbjthM:&imgrc=FaKznlq0LWXQ7M:")
+        webbrowser.open(url,new=new)
 
+    if "image search" in data:
+	data = data.split(" ")
+        youtube_search = data[2]
+        speak("Hold on Rafael, I will look up " + image_search + " in Google images")
+        url = ("https://www.google.com/search?q=" + image_search + "&rlz=1CASMAA_enUS796&source=lnms&tbm=isch&sa=X&ved=0ahUKEwixpf_Uu_TaAhVMyFQKHWrpD6sQ_AUICigB&biw=1280&bih=686&safe=active&ssui=on#imgdii=mj9_k0yRRbjthM:&imgrc=FaKznlq0LWXQ7M:")
+        webbrowser.open(url,new=new)
+	
     if "YouTube search" in data:
         data = data.split(" ")
         youtube_search = data[2]
