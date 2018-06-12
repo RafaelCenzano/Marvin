@@ -5,4 +5,4 @@
 }
 
 
-curl -H "Content-type:application/json" -X POST -d @slack.json [website here]
+curl -H "Content-type:application/json" -X POST -d @slack.json [url here]
