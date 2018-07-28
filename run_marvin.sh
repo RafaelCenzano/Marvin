@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set -x
-source ~rafael/.bashrc
+source ~####/.bashrc
 echo $PATH
 workon marvin
 
-python2.7 /home/rafael/Documents/Programming/Marvin-Jarvis-/marvin_code.py
+python2.7 /home/####/Documents/Programming/Marvin-Jarvis-/marvin_code.py
