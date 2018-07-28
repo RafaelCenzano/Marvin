@@ -161,7 +161,7 @@ def marvin(data):
   if "time in" in data:
     data = data.split(" ")
     time_place = data[2]
-    speak("Hold on Rafael, I will look up the time in " + time_place + " for you")
+    speak("Hold on #####, I will look up the time in " + time_place + " for you")
     url = ("https://time.is/" + time_place)
     webbrowser.open(url,new=new)
 
